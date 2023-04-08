@@ -22,4 +22,14 @@ public class GreetingImp {
         }
 
     }
+//    public String getAllUser(GreetingDTO greetingDTO,long countUser){
+//        String Users = null;
+//       for(int i=0;i<((int)countUser);i++)
+//       {
+//           Users = Users +" "+greetingDTO.toString();
+//       }
+//           return Users;
+//    }
 }
+
+
