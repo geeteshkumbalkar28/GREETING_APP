@@ -31,8 +31,10 @@ public class GreetingImp {
         List<User> userData = iGreetingRepo.findAll();
 
         return userData;
-
-
-
+    }
+    public User update(GreetingDTO greetingDTO,Optional<User> userData,IGreetingRepo iGreetingRepo){
+        userData.get().setFirstName(greetingDTO.firstName);
+        userData.get().setLastName(greetingDTO.lastName);
+        return iGreetingRepo.save(userData.get());
     }
 }
