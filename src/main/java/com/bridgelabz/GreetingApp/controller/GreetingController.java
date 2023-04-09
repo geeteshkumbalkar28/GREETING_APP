@@ -57,4 +57,14 @@ public class GreetingController {
         }
         return null;
     }
+    @DeleteMapping("/Delete/{id}")
+    public String deleteUser(@PathVariable int id){
+        Optional<User> userData = iGreetingRepo.findById(id);
+        if(userData.isPresent())
+        {
+            iGreetingRepo.deleteById(id);
+            return "Message Delete succesfully ";
+        }
+        return "id not found";
+    }
 }
